@@ -1,5 +1,4 @@
 // id page cass bouton  id score id gagner perdu egaux reset//
-const afficherResultat = document.getElementById("score");
 const afficherVictoire = document.getElementById("gagner")
 const afficherEgalite = document.getElementById("egaux")
 const afficherPerdu = document.getElementById("perdu")
@@ -19,46 +18,58 @@ boutons.forEach(function(bouton){
         console.log("Il a joué : " + robot)
         if(humain =="pierre" && robot == "ciseaux" ){
             element.gagner+=1;
-             afficherVictoire.textContent = element.gagner +  "victoire"
+             afficherVictoire.textContent = element.gagner +  " victoire"
             
         }
         else if (humain=="ciseaux" && robot == "feuille"){
             element.gagner+=1;
-            afficherVictoire.textContent = element.gagner + "victoire"
+            afficherVictoire.textContent = element.gagner + " victoire"
             
         } else if (humain == "feuille" && robot == "pierre"){
             element.gagner+=1;
-            afficherVictoire.textContent = element.gagner + "victoire"
+            afficherVictoire.textContent = element.gagner + " victoire"
             
         }else if (humain=="pierre" && robot == "pierre"){
             element.egalite+=1
-            afficherEgalite.textContent = element.egalite + "égalité";
+            afficherEgalite.textContent = element.egalite + " égalité";
             
         }else if (humain=="ciseaux" && robot == "ciseaux"){
             element.egalite+=1
-            afficherEgalite.textContent =element.egalite + "égalité";
+            afficherEgalite.textContent =element.egalite + " égalité";
             
         }else if (humain=="feuille" && robot == "feuille"){
             element.egalite+=1
-            afficherEgalite.textContent = element.egalite + "égalité";
+            afficherEgalite.textContent = element.egalite + " égalité";
             
         }else if (humain=="pierre" && robot == "feuille"){
             element.perdu+=1
-            afficherPerdu.textContent = element.perdu + "défaite";
+            afficherPerdu.textContent = element.perdu + " défaite";
             
         }else if (humain=="feuille" && robot == "ciseaux"){
             element.perdu+=1
-            afficherPerdu.textContent = element.perdu + "défaite";
+            afficherPerdu.textContent = element.perdu + " défaite";
             
         }else if (humain=="ciseaux" && robot == "pierre"){
             element.perdu+=1
-            afficherPerdu.textContent = element.perdu  + "défaite";
+            afficherPerdu.textContent = element.perdu  + " défaite";
             
         }
-        console.log(element.gagner + "Victoire")
-        console.log(element.egalite + "égalité")
-        console.log(element.perdu + "défaite" )
+        console.log(element.gagner + " victoire")
+        console.log(element.egalite + " égalité")
+        console.log(element.perdu + " défaite" )
 
 
     })
+});
+afficherReesayer.addEventListener("click",function(){
+    element.gagner =0;
+    element.egalite = 0;
+    element.perdu=0;
+   afficherVictoire.textContent = element.gagner + " victoire"
+   afficherEgalite.textContent = element.egalite + " égalité"
+   afficherPerdu.textContent = element.perdu + " défaite"
+   
+    
+
+
 });
