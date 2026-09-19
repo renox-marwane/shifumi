@@ -1,20 +1,50 @@
+
+
+body{
+    margin: 0;
+    
+}
 h1{
     text-align:center;
     color:blue;
 }
 #page{
    display:flex; /*se met cote a cote horizontalement */
-   justify-content: center;/*centre les boutons horizontalement*/
+   flex-direction: column;
+   /*justify-content: center;/*centre les boutons horizontalement*/
    align-items: center;/*centre les bouton verticalement*/
    gap:15px;/*ajoute un espace entre eux */
    background-color: aqua;
    border-color: blue;
    border-radius:  2px;
+   max-width: 400px ;/*pas plus large que 400px*/
+   width:90%;
+   margin:40px auto;/*centre la carte horizontalement*/
+   border-radius: 12px;
+   padding:30px;
+   box-sizing: border-box;/*contrôle la manière dont la largeur et la hauteur d’un élément sont calculées*/
+   border:solid blue
+
+}
+.bouton{
+    width:100%;
+}
+#reset{
+    width: 160px;
+    background-color:lightblue;
+
+
+}
+.score{
+    text-align: center;
 }
 button{
-    padding:10px,20px; /*10px en haut/bas, 20px à gauche/droite moins colle au texte*/
+    padding:10px 20px; /*10px en haut/bas, 20px à gauche/droite moins colle au texte*/
     font-size: 16px;/*agrandir la taille du texte*/
     border-radius: 8px;/*coins arrondi*/
+    box-sizing: border-box;
+    width: 100%;
+    border: solid blue;
 
     /*border:none;enleve la bordure grise par defaut */
     cursor: pointer;/*souris devient une main au survol*/
