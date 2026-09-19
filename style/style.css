@@ -1,5 +1,28 @@
-#page{
-    background-color: aqua;
-    border-color: blue;
-    border-radius:  2px;
+h1{
+    text-align:center;
+    color:blue;
 }
+#page{
+   display:flex; /*se met cote a cote horizontalement */
+   justify-content: center;/*centre les boutons horizontalement*/
+   align-items: center;/*centre les bouton verticalement*/
+   gap:15px;/*ajoute un espace entre eux */
+   background-color: aqua;
+   border-color: blue;
+   border-radius:  2px;
+}
+button{
+    padding:10px,20px; /*10px en haut/bas, 20px à gauche/droite moins colle au texte*/
+    font-size: 16px;/*agrandir la taille du texte*/
+    border-radius: 8px;/*coins arrondi*/
+
+    /*border:none;enleve la bordure grise par defaut */
+    cursor: pointer;/*souris devient une main au survol*/
+    background-color: white;
+    transition: background-color 0.2s;/*rend le chargement de couleur progressif*/
+}
+button:hover{
+    background-color: lightblue;
+}
+
+
