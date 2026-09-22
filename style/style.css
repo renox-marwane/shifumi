@@ -54,5 +54,10 @@ button{
 button:hover{
     background-color: lightblue;
 }
+#resultat{
+    white-space:pre-line ;/*Par défaut le HTML ignore les \n, cette propriété CSS force le navigateur à les respecter.*/
+    text-align: center;
+    box-sizing: border-box;
+}
 
 

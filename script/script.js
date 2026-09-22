@@ -3,6 +3,7 @@ const afficherVictoire = document.getElementById("gagner")
 const afficherEgalite = document.getElementById("egaux")
 const afficherPerdu = document.getElementById("perdu")
 const afficherReesayer = document.getElementById("reset")
+const afficherResultat = document.getElementById("resultat")
 const  boutons = document.querySelectorAll(".bouton button");
 const  element = {gagner : 0,egalite : 0,perdu:0};
 const score = 0;
@@ -14,11 +15,14 @@ boutons.forEach(function(bouton){
         let nombre = Math.floor(aleatoire * choix.length );// prend l'entier 
         let robot = choix[nombre];
 
+       
+
         console.log("j'ai jouer :" +  humain);
-        console.log("Il a joué : " + robot)
+        console.log("Il a joué : " + robot);
+        afficherResultat.textContent = "J'ai joué : " + humain + "\nROBOT a joué : " + robot;
         if(humain =="pierre" && robot == "ciseaux" ){
             element.gagner+=1;
-             afficherVictoire.textContent = element.gagner +  " victoire"
+            afficherVictoire.textContent = element.gagner +  " victoire"
             
         }
         else if (humain=="ciseaux" && robot == "feuille"){
@@ -54,6 +58,7 @@ boutons.forEach(function(bouton){
             afficherPerdu.textContent = element.perdu  + " défaite";
             
         }
+        
         console.log(element.gagner + " victoire")
         console.log(element.egalite + " égalité")
         console.log(element.perdu + " défaite" )
